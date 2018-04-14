@@ -1,5 +1,6 @@
-766c3f51d5a04306f8e7f68e42aa28f4 *DESCRIPTION
-f07d430ee002f45e37cc47c2997dca08 *NAMESPACE
+a7192facd1eb4eab3cec525893a043ba *DESCRIPTION
+315baaa6588785cd7ef9b02e002e26d3 *NAMESPACE
+cc73f36ccf039ebdcb212f7ec61d380c *NEWS.md
 b002a8f52e09d121a9962be15c8aa097 *R/B1Nmean.R
 63ccf03295ef713b45b408007427767e *R/B1Nsir.R
 fd2f2f89758de683d1c80b8d07e16fe0 *R/B1prop.R
@@ -20,7 +21,7 @@ ef83876a568d3ae8593a62d2ebbc60d6 *R/NPV.R
 541479f81059db2bd6617818b00ddc3f *R/PPV.R
 dedb3c48556956e816ba96d904237b1d *R/SSQ.R
 10374e2b0be775a819b0b36888ab83b1 *R/binPriorsPlot.R
-e28cabce67d48b6722828fdc19fcf861 *R/looicplot.R
+c40dbf4bf6ae03ef3ff48f5a184456f0 *R/looicplot.R
 c3068f87d542b5b69232db1bdd32908e *R/meansplot.R
 8ceb42fd80c4ed6f46ef8d999a26527c *R/nineplot.R
 44b92c481639e0757c1126e097eb935d *R/overdispersionCheck.R
@@ -82,10 +83,10 @@ e25562211c2956c9004a39894b3a6889 *man/binPriorsPlot.Rd
 1ad2690e6617c52314f46b01a6500179 *man/budworm.Rd
 8be79deafff36eb85fdbd2402521b5ed *man/crickets.Rd
 1dea9ae6da466192bd7898414aad8302 *man/darwin.Rd
-8d3fec3137e7e0526d78a00e06866180 *man/evidence-package.Rd
+7bcc03f366f31baa6ecba7f95368cd31 *man/evidence-package.Rd
 f6df73e9c455fcbc00793bd2e6fec549 *man/fev.Rd
 4e23330a00c0343197cf95a1bf9bacac *man/lightspeed.Rd
-90677380bea821d755fe5057dd297095 *man/looicplot.Rd
+46421c31a1cf92a53bfb40c3d852a4f0 *man/looicplot.Rd
 fb37237beb7f42900e9e0fd07ffc4612 *man/meansplot.Rd
 a57e526bbf6ead5624991f59f2da6a11 *man/nineplot.Rd
 c623d2f948e7ec897e012b378d1d3b20 *man/overdispersionCheck.Rd

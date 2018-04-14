@@ -1,33 +1,36 @@
-looicplot <- function(looiclist, modnames, perc=90) {
-    looF <- function(x) loo::loo(x, cores = 1)
+looicplot <- function(looiclist, modnames, perc = 90) {
     n <- length(looiclist)
     model <- numeric(n)
-    looics <- numeric(n)
+    looic <- numeric(n)
+    loose <- numeric(n)
     ic <- numeric(n)
     se <- numeric(n)
     lwr <- numeric(n)
     upr <- numeric(n)
-    options("loo.cores" = 1)
-    qq <- lapply(looiclist, looF)
     for(i in 1:n) {
-        model[i] <- modnames[i]
-        ic[i] <- qq[[i]][[3]]
-        se[i] <- qq[[i]][[6]]
-        upr[i] <- ic[i] - se[i] * qnorm((100-perc)/100)
-        lwr[i] <- ic[i] + se[i] * qnorm((100-perc)/100)
+        fit <- get(looiclist[[i]])
+        LL <- log_lik(fit)
+        ref <- relative_eff(LL, chain_id=rep(1, 4000))
+        Loo <- loo(LL, r_eff = ref, k_threshold = 7, cores = 1)
+        looic[i] <- Loo$estimates[3, 1]
+        loose[i] <- Loo$estimates[3, 2]
+        upr[i] <- looic[i] + loose[i] * (-qnorm(((100 - perc)/2)/100))
+        lwr[i] <- looic[i] - loose[i] * (-qnorm(((100 - perc)/2)/100))
     }
-    df <- data.frame("model" = model, "looic"=ic, "se"=se,
+    df <- data.frame("model" = modnames, "looic"=looic, "se"=loose,
                      "lwr" = lwr, "upr" = upr)
     rdr <- rev(order(df$looic))
-    df <- df[rdr, ]   
+    df <- df[rdr, ]
+    xmn <- min(df$lwr)
+    xmx <- max(df$upr)
     print(df)
-    sumchart(df, df$model)
+    sumchart(df, df$model, perc = perc)
     invisible(df)
 }
 sumchart <- function(df, rownames=df$modnames, groups=rownames[1], perc=90) {
    n <- dim(df)[1]
-   mn <- min(df[[2]]) 
-   mx <- max(df[[2]]) 
+   mn <- min(df$lwr) 
+   mx <- max(df$upr) 
    xrng <- c(mn, mx)
    xtr1 <- floor(xrng[1]/10)
    xtr2 <- ceiling(xrng[2]/10)
@@ -38,3 +41,4 @@ sumchart <- function(df, rownames=df$modnames, groups=rownames[1], perc=90) {
        segments(df$lwr[i], i, df$upr[i], i, lwd=4, col="skyblue")
        }
    }
+        

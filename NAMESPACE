@@ -20,6 +20,8 @@ importFrom("stats", "AIC", "IQR", "chisq.test", "coef", "dbeta",
 importFrom("utils", "capture.output")
 importFrom("rstan","stan")
 importFrom("rstanarm", "stan_glm","student_t","pp_check","posterior_interval",
-           "posterior_predict")
+           "posterior_predict", "log_lik")
+importFrom("loo", "loo", "relative_eff")
+
 
 

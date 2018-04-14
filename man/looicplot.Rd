@@ -5,11 +5,11 @@
 \description{The LOOIC-value (like the non-Bayesian AIC-value) is a
   useful measure of model performance for model prediction.}
 \usage{
-looicplot(looiclist, modnames, perc=90)
+looicplot(looiclist, modnames, perc = 90)
 }
 \arguments{
   \item{looiclist}{
-    a list of rstanarm model objects }
+    a list of character-valued names of rstanarm model objects }
   \item{modnames}{
     a character-valued vector of model names for each of the models }
   \item{perc}{
@@ -30,6 +30,7 @@ Robert van Hulst
 \code{\link{dotchart}}
 }
 \examples{
+\dontrun{
 data(budworm)
 Mbudworm1 <- stan_glm(formula = cbind(dead, 20 - dead) ~ ldose,
                       family = binomial, data = budworm,
@@ -43,9 +44,9 @@ Mbudworm3 <- stan_glm(formula = cbind(dead, 20 - dead) ~ ldose + sex,
                       family = binomial, data = budworm,
                       prior = student_t(df = 7),
                       prior_intercept = student_t(df = 7))
-looicplot(looiclist=list(Mbudworm1, Mbudworm2, Mbudworm3),
-         modnames=c("~ ldose", "~ ldose + sex", "~ ldose * sex"),
-         perc=90)
+looicplot(looiclist = list("Mbudworm1", "Mbudworm2", "Mbudworm3"),
+          modnames = c("~ ldose", "~ ldose + sex", "~ ldose * sex") )
+}
 }
 
 
