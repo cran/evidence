@@ -1,4 +1,4 @@
-a7192facd1eb4eab3cec525893a043ba *DESCRIPTION
+69df757ebe8dbc732111db8da25e90cd *DESCRIPTION
 315baaa6588785cd7ef9b02e002e26d3 *NAMESPACE
 cc73f36ccf039ebdcb212f7ec61d380c *NEWS.md
 b002a8f52e09d121a9962be15c8aa097 *R/B1Nmean.R
@@ -54,7 +54,7 @@ dbe8f1291c5b99b1a221ec7884113420 *man/Aspirin.Rd
 372df23c6fe54461f40ef5f10961378e *man/B1Nmean.Rd
 09f124fcad7d15dd43cc702ad583fc35 *man/B1Nsir.Rd
 af508b906db09f9a8031039bd76d2457 *man/B1prop.Rd
-0ef687f5cbe5f0804bc98a1111ea9b2e *man/B1propSim.Rd
+90a5b50a76a7e6dd4247c05f1229f002 *man/B1propSim.Rd
 92b5d20e0fe14652f1a7a47e6c86eb99 *man/B2Nsir.Rd
 5e9ca6a50c448ae80a9db55766f4129c *man/B2props.Rd
 82c09328e3d5d9f77bdbf2a930d04563 *man/Bft2x2.Rd
@@ -83,7 +83,7 @@ e25562211c2956c9004a39894b3a6889 *man/binPriorsPlot.Rd
 1ad2690e6617c52314f46b01a6500179 *man/budworm.Rd
 8be79deafff36eb85fdbd2402521b5ed *man/crickets.Rd
 1dea9ae6da466192bd7898414aad8302 *man/darwin.Rd
-7bcc03f366f31baa6ecba7f95368cd31 *man/evidence-package.Rd
+4ef13e28740888018aa5e389a4a986ff *man/evidence-package.Rd
 f6df73e9c455fcbc00793bd2e6fec549 *man/fev.Rd
 4e23330a00c0343197cf95a1bf9bacac *man/lightspeed.Rd
 46421c31a1cf92a53bfb40c3d852a4f0 *man/looicplot.Rd

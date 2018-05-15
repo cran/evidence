@@ -17,7 +17,7 @@ B1propSim(p, N = 100, prior = c("uniform", "near_0.5",
 \arguments{
   \item{p}{
 the ``real'' binomial probability; if a number samller than 0 or one
-lager than 1 are entered the function will choose an arbitrary probability
+lager than 1 isentered the function will choose an arbitrary probability
 }
   \item{N}{
 the number of observations to accumulate

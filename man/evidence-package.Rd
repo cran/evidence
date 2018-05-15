@@ -25,8 +25,8 @@ graphics-centered approach.
 \tabular{ll}{
 Package: \tab evidence\cr
 Type: \tab Package\cr
-Version: \tab 0.8.9\cr
-Date: \tab 2018-04-14\cr
+Version: \tab 0.8.10\cr
+Date: \tab 2018-04-15\cr
 License: \tab GPL\cr
 }
 }
